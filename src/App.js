@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer"
 import SignupScreen from "./components/Screens/SignupScreen";
 import LoginScreen from "./components/Screens/LoginScreen";
+import ProductDetails from "./components/Screens/ProductDetails.";
 
 
 export default function App() {
@@ -13,12 +14,14 @@ export default function App() {
     <>
 
 <BrowserRouter>
-<></>
 <Header/>
 <main>
   <Container>
     <Routes>
       <Route path="/" element={<Home />} />
+    </Routes>
+    <Routes>
+      <Route path="/product/:id" element={<ProductDetails />} />
     </Routes>
     <Routes>
       <Route path="/signup" element={<SignupScreen />} />
